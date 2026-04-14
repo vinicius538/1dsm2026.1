@@ -1,25 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="style/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UMT - Home</title>
-</head>
-<body>
-    <header>
-        <a href="home.html">
-            <img id="logo" src="imagem/faculdadeUMT.png" alt="">
-        </a>
-        <div class="links">
-            <a href="home.html">Home</a>
-            <a href="contato.html">Contatos</a>
-            <a href="sobrenos.html">Sobre nós</a>
-        </div>
-    </header>
+{% extends 'base.html' %}
 
-    <img id="faculdade" src="imagem/faculdade.jpg" alt="">
+{% block title %}Home{% endblock %}
+
+    {% block content %}
+    <img id="faculdade" src="{{ url_for('static', filename='img/faculdade.jpg') }}" alt="" class="my-md-3 my-lg-5">
 
     <h2>
         Por que escolher a Horizonte?
@@ -36,5 +20,4 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus recusandae eveniet ipsa error placeat deserunt nulla aspernatur iusto, earum esse porro amet numquam doloribus corrupti veniam praesentium, consectetur ratione similique.
     </p>
 
-</body>
-</html>
+    {% endblock %}
