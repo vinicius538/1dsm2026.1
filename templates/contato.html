@@ -1,40 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="../static/css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UMT - Contato</title>
-</head>
-<body>
-    <header>
-        <a href="home.html">
-            <img id="logo" src="../static/img/faculdadeUMT.png" alt="">
-        </a>
-        <div class="links">
-            <a href="/">Home</a>
-            <a href="/contato">Contatos</a>
-            <a href="/sobrenos">Sobre nós</a>
-        </div>
-    </header>
+{% extends 'base.html' %}
+
+{% block title %}Contatos{% endblock %}
     
-    <div class="container">
-        <h2>
-            Entre em contato
-        </h2>
-
-        <p>
-            <input id="nome" type="text" placeholder="Nome:"> <br>  
-            <input id="email" type="email" placeholder="Email:"> <br>
-            <input id="assunto" type="text" placeholder="Assunto:"> <br>
-            <input id="descricao" type="text" placeholder="Descrição:"> <br>
-
-            <button>
-                Enviar
-            </button>
-        </p>
-    </div>
-
-</body>
-</html>
+    {% block content %}
+    <main>
+        <div class="container d-flex flex-column mt-5">
+            <div class="contato text-center w-100">
+                <h2>Entre em contato</h2>
+            
+                <form class="mt-4 d-flex flex-column align-items-center">
+                
+                    <input id="nome" class="form-control mb-3 custom-input" type="text" placeholder="Nome:">
+                    <input id="email" class="form-control mb-3 custom-input" type="email" placeholder="Email:">
+                    <input id="assunto" class="form-control mb-3 custom-input" type="text" placeholder="Assunto:">
+                    <input id="descricao" class="form-control mb-3 custom-input" type="text" placeholder="Descrição:">
+                
+                    <button class="btn btn-danger px-5">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    {% endblock %}

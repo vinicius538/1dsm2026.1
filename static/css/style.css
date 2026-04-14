@@ -8,16 +8,46 @@ h2{
     color: rgb(184, 0, 0);
 }
 
-header{
-    display: flex;
+header {
     background-color: #ffffff;
     border-bottom: solid rgb(134, 0, 0) 1px;
+    padding: 0 5%; 
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;
+    flex-wrap: wrap; 
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #logo{
     width: 100px;
     height: 100px;
 }
+
+@media (max-width: 600px) {
+    #logo{
+        width: 60px;
+        height: 60px;
+    }
+    nav {
+        flex-direction: column; 
+        padding: 10px 0;
+    }
+    
+    .links a {
+        padding: 10px; 
+    }
+}
+
 
 #faculdade{
     display: block;
@@ -27,20 +57,11 @@ header{
 
 }
 
-.links{
-    display: flex;
-    margin-left: 1000px;
-    margin-left: 30;
-    margin-top: auto;
-    margin-bottom: auto;
-    flex-wrap: nowrap;
-}
-.links a{
 
+.links a{
     color: red;
     text-decoration: none;
     padding: 20px;
-    
 }
 .links a:hover{
     transition: 0.5s;
@@ -52,16 +73,12 @@ a{
     margin-left: 10px;
 }
 
-p,h2{
+ p, h2{
     margin-left: 5%;
     margin-right: 5%;
+    
 }
-p input{
-    width: 50%;
-    border: none;
-    background-color: #f9e7e7;
-    color: black
-}
+
 
 button{
     border-radius: 20%;
@@ -77,4 +94,11 @@ button:hover{
 
 ul li{
     margin-left: 5%;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
 }
