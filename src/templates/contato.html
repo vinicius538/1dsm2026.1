@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Contatos{% endblock %}
+    
+    {% block content %}
+    <main>
+        <div class="container d-flex flex-column mt-5">
+            <div class="contato text-center w-100">
+                <h2>Entre em contato</h2>
+            
+                <form class="mt-4 d-flex flex-column align-items-center">
+                
+                    <input id="nome" class="form-control mb-3 custom-input" type="text" placeholder="Nome:">
+                    <input id="email" class="form-control mb-3 custom-input" type="email" placeholder="Email:">
+                    <input id="assunto" class="form-control mb-3 custom-input" type="text" placeholder="Assunto:">
+                    <input id="descricao" class="form-control mb-3 custom-input" type="text" placeholder="Descrição:">
+                
+                    <button class="btn btn-danger px-5">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    {% endblock %}
